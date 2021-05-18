@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
         android:id="@+id/titleTXT"
         style="@style/TextAppearance.AppCompat.Headline"
+        tools:visibility="visible"
+        android:layout_marginTop="48dp"
+        android:layout_centerHorizontal="true"
         android:textSize="48sp"
         android:textColor="@color/soft_blue"
         android:textStyle="bold"
@@ -21,13 +20,20 @@
     <EditText
         android:id="@+id/pesoEDT"
         android:hint="@string/insira_sua_massa_em_kg_ex_80_8"
-        android:layout_width="wrap_content"
+        android:layout_below="@id/titleTXT"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/input_style" />
 
     <EditText
         android:id="@+id/alturaEDT"
         style="@style/input_style"
+        tools:visibility="visible"
+        android:layout_marginHorizontal="24dp"
+        android:layout_below="@+id/pesoEDT"
+        android:layout_alignStart="@+id/pesoEDT"
+        android:layout_alignEnd="@id/pesoEDT"
         android:layout_width="match_parent"
         android:hint="@string/insira_sua_altura_em_m_ex_1_75"
         android:layout_height="wrap_content" />
@@ -37,9 +43,11 @@
         android:backgroundTint="@android:color/holo_green_light"
         android:text="@string/calcular"
         android:padding="16dp"
+        tools:visibility="visible"
+        android:layout_alignParentBottom="true"
         android:textSize="16sp"
         android:layout_marginTop="46dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-</LinearLayout>
+</RelativeLayout>

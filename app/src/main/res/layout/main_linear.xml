@@ -8,16 +8,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/titleTXT"
-        style="@style/TextAppearance.AppCompat.Headline"
-        android:textSize="48sp"
-        android:textColor="@color/soft_blue"
-        android:textStyle="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/imc" />
-
     <EditText
         android:id="@+id/pesoEDT"
         android:hint="@string/insira_sua_massa_em_kg_ex_80_8"
@@ -32,14 +22,31 @@
         android:hint="@string/insira_sua_altura_em_m_ex_1_75"
         android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/calcularBTN"
-        android:backgroundTint="@android:color/holo_green_light"
-        android:text="@string/calcular"
-        android:padding="16dp"
-        android:textSize="16sp"
-        android:layout_marginTop="46dp"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:backgroundTint="@android:color/holo_green_light"
+            android:text="@string/calcular"
+            android:id="@+id/calcularBTN"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:layout_marginEnd="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/titleTXT"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="48sp"
+            android:textColor="@color/soft_blue"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/imc" />
+    </LinearLayout>
 
 </LinearLayout>
